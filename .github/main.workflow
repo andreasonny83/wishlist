@@ -4,7 +4,7 @@ workflow "IDENTIFIER" {
 }
 
 action "ACTION1" {
-  uses = "docker://image1"
+  uses = "docker://image2"
 }
 
 action "ACTION2" {
