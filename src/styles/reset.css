@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-size: 1.18rem;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body-background);
+}
+
+html,
+body {
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Raleway', Lucida Grande, sans-serif;
+  color: var(--black);
+  background-color: var(--white-light);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+}

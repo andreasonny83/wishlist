@@ -1,0 +1,13 @@
+:root {
+  --color-white: 0, 0%, 93%;
+  --color-white-light: 0, 0%, 100%;
+  --color-black: 0, 0%, 20%;
+  --color-black-dark: 0, 0%, 7%;
+  --color-light-gray: 180, 7%, 96%;
+
+  --white: hsl(var(--color-white));
+  --white-light: hsl(var(--color-white-light));
+  --black: hsl(var(--color-black));
+  --black-dark: hsl(var(--color-black-dark));
+  --body-background: hsl(var(--color-black));
+}

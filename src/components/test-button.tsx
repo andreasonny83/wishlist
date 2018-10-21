@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { WishlistProvider } from '../app';
+import { WishlistConsumer } from '../whishlist.provider';
 
 interface ButtonProps {
   onClick(e: React.MouseEvent<HTMLElement>): void;
@@ -28,13 +28,13 @@ export class Button extends React.PureComponent<ButtonProps> {
     const { color, onClick: handleClick, children } = this.props;
 
     return (
-      <WishlistProvider.Consumer>
+      <WishlistConsumer>
         {({ app }) => (
           <CustomButton color={color} onClick={handleClick} name={app.name}>
             {children}
           </CustomButton>
         )}
-      </WishlistProvider.Consumer>
+      </WishlistConsumer>
     );
   }
 }
