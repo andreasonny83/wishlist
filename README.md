@@ -4,6 +4,8 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
+[![netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com)
+
 ## Prerequisites
 
 This project requires NodeJS (at least version 6) and NPM.
