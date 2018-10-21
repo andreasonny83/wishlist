@@ -3,6 +3,7 @@
 > This is pretty much a WIP project
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 [![netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com)
 
@@ -39,7 +40,7 @@ $ yarn --version
     - [Serving the distribution version](#serving-the-distribution-version)
   - [Contributing](#contributing)
   - [Built With](#built-with)
-  - [Authors](#authors)
+  - [Contributors](#contributors)
   - [License](#license)
 
 ## Getting Started
@@ -125,11 +126,17 @@ _Note_ this requires
 - React
 - Love
 
-## Authors
+## Contributors
 
-- **Andrea Sonny** - _Initial work_ - [andreasonny83](https://github.com/andreasonny83)
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/8806300?v=4" width="100px;"/><br /><sub><b>Andrea SonnY</b></sub>](https://andreasonny83.github.io)<br />[💻](https://github.com/andreasonny83/wishlist/commits?author=andreasonny83 "Code") [🎨](#design-andreasonny83 "Design") [📖](https://github.com/andreasonny83/wishlist/commits?author=andreasonny83 "Documentation") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
 ## License
 
