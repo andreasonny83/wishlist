@@ -9,12 +9,14 @@
     "contributors:generate": "all-contributors generate",
     "build": "rimraf build && NODE_ENV=production webpack --mode production && node ./scripts/build.js",
     "serve:dist": "serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/enzyme": "^3.1.14",
     "@types/jest": "^23.3.5",
     "@types/loglevel": "^1.5.3",
     "@types/react": "^16.4.16",
@@ -25,7 +27,6 @@
     "fs-extra": "^7.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
-    "loglevel": "^1.6.1",
     "mini-css-extract-plugin": "^0.4.4",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.1.1",
@@ -33,7 +34,10 @@
     "serve": "^10.0.2",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
+    "ts-jest": "^23.10.4",
     "ts-loader": "^5.2.1",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.1.3",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
@@ -42,9 +46,33 @@
   "dependencies": {
     "emotion": "^9.2.12",
     "emotion-theming": "^9.2.9",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "loglevel": "^1.6.1",
     "ramda": "^0.25.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-emotion": "^9.2.12"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!**/*.d.ts"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "setupTestFrameworkScriptFile": "./setupTests.ts",
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
   }
 }

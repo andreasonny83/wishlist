@@ -1,13 +1,13 @@
 import * as React from 'react';
 import styled, { cx } from 'react-emotion';
 
-interface ButtonProps {
+interface IButtonProps {
   className?: string;
   disabled?: boolean;
 }
 
-export class Button extends React.PureComponent<ButtonProps> {
-  render() {
+export class Button extends React.PureComponent<IButtonProps> {
+  public render() {
     const { children, className, ...otherProps } = this.props;
 
     return (
@@ -21,14 +21,14 @@ export class Button extends React.PureComponent<ButtonProps> {
   }
 }
 
-export interface StyledButtonProps {
+export interface IStyledButtonProps {
   // override?: ButtonThemeProps;
   color?: string;
   roundCorners?: boolean;
   backgroundFocus?: string;
 }
 
-const StyledButton = styled('button')<StyledButtonProps>`
+const StyledButton = styled('button')<IStyledButtonProps>`
   border-radius: 4px;
   margin: 0.5rem;
   border-color: transparent;

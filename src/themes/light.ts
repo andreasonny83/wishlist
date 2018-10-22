@@ -1,4 +1,4 @@
-import { ITheme } from 'src/theme';
+import { ITheme } from '../theme';
 
 export const lightTheme: ITheme = {
   Button: {

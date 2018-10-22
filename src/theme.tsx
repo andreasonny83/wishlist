@@ -23,12 +23,12 @@ const getTheme = (themeName: string): ITheme =>
     mergeDeepRight(defaultTheme, themes[`${themeName}Theme`])) ||
   defaultTheme;
 
-interface ThemeProviderProps {
+interface IThemeProviderProps {
   children?: React.ReactNode;
   theme?: string;
 }
 
-export const ThemeProvider: React.SFC<ThemeProviderProps> = ({
+export const ThemeProvider: React.SFC<IThemeProviderProps> = ({
   children,
   theme,
 }) => <ThemingProvider theme={getTheme(theme)}>{children}</ThemingProvider>;

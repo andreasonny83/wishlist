@@ -4,11 +4,11 @@ interface IApp {
   name: string;
 }
 
-export interface WishlistContextType {
+export interface IWishlistContextType {
   app: IApp;
 }
 
-const context = React.createContext<WishlistContextType | null>(null);
+const context = React.createContext<IWishlistContextType | null>(null);
 
 export const WishlistProvider = context.Provider;
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ITheme, ThemeProvider } from './theme';
+import { ThemeProvider } from './theme';
 import { log, LogLevelDesc } from './log';
 import { Button } from './components/button';
 import { WishlistProvider } from './whishlist.provider';
@@ -24,12 +24,12 @@ export const bootstrap = (appConfig: IAppConfig) => {
   );
 };
 
-interface AppProps {
+interface IAppProps {
   config: IAppConfig;
 }
 
-class App extends React.PureComponent<AppProps> {
-  render() {
+class App extends React.PureComponent<IAppProps> {
+  public render() {
     return (
       <WishlistProvider value={this.props.config}>
         <ThemeProvider theme="light">
@@ -40,7 +40,7 @@ class App extends React.PureComponent<AppProps> {
               <span>Welcome to WishList</span>
             </h1>
             <Button className="start-button">Start</Button>
-            <Button disabled className="start-button">
+            <Button disabled={true} className="start-button">
               Disabled
             </Button>
           </main>
