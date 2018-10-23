@@ -67,4 +67,13 @@ const StyledButton = styled('button')<IStyledButtonProps>`
   }
 `;
 
-StyledButton.defaultProps = {};
+StyledButton.defaultProps = {
+  theme: {
+    Button: {
+      background: '#fff',
+      backgroundActive: '#eee',
+      backgroundFocus: '#ccc',
+      color: '#000',
+    },
+  },
+};

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ThemeProvider } from './theme';
 import { log, LogLevelDesc } from './log';
-import { Button } from './components/button';
+import { Button } from './components/Button';
 import { WishlistProvider } from './whishlist.provider';
 
 import './styles/index.css';
