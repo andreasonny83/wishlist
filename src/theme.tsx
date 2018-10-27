@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider as ThemingProvider } from 'emotion-theming';
 import { mergeDeepRight } from 'ramda';
-import { defaultTheme, lightTheme, darkTheme } from './themes';
+import { defaultTheme, tealTheme, redTheme } from './themes';
 
 export interface ITheme {
   Button: {
@@ -16,9 +16,9 @@ interface IThemes {
   [key: string]: ITheme;
 }
 
-const themes: IThemes = { lightTheme, darkTheme };
+const themes: IThemes = { tealTheme, redTheme };
 
-const getTheme = (themeName: string): ITheme =>
+export const getTheme = (themeName: string): ITheme =>
   (themes[`${themeName}Theme`] &&
     mergeDeepRight(defaultTheme, themes[`${themeName}Theme`])) ||
   defaultTheme;

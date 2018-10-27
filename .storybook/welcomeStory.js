@@ -1,16 +1,14 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { wInfo } from '../utils';
+import { wInfo } from '../src/utils';
 
-storiesOf('Welcome', module).addWithJSX(
+storiesOf('Welcome', module).add(
   'to your new Storybook🎊',
   wInfo(`
-
-
     ### Notes
 
-    Hello world!:
+    Hello world!
 
     ### Usage
     ~~~js

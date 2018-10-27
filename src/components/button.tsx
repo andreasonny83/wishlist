@@ -1,9 +1,12 @@
 import * as React from 'react';
 import styled, { cx } from 'react-emotion';
+import { ITheme } from '../theme';
 
 interface IButtonProps {
   className?: string;
   disabled?: boolean;
+  theme?: ITheme;
+  onClick?: () => void;
 }
 
 export class Button extends React.PureComponent<IButtonProps> {
@@ -22,7 +25,6 @@ export class Button extends React.PureComponent<IButtonProps> {
 }
 
 export interface IStyledButtonProps {
-  // override?: ButtonThemeProps;
   color?: string;
   roundCorners?: boolean;
   backgroundFocus?: string;
@@ -48,32 +50,21 @@ const StyledButton = styled('button')<IStyledButtonProps>`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  :focus,
-  :hover {
+  &:focus:not([disabled]),
+  &:hover:not([disabled]) {
     text-decoration: none;
     background-color: ${(props) => props.theme.Button.backgroundFocus};
   }
 
-  :active {
+  &:active:not([disabled]) {
     background-color: ${(props) => props.theme.Button.backgroundActive};
     box-shadow: none;
   }
 
-  :disabled {
+  &:disabled,
+  &[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
     box-shadow: none;
-    pointer-events: none;
   }
 `;
-
-StyledButton.defaultProps = {
-  theme: {
-    Button: {
-      background: '#fff',
-      backgroundActive: '#eee',
-      backgroundFocus: '#ccc',
-      color: '#000',
-    },
-  },
-};

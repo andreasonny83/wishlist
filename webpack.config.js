@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 const config = {
-  entry: ['./src/index.ts'],
+  entry: [path.resolve(__dirname, 'src/index.ts')],
 
   mode: 'development',
 
@@ -27,7 +27,7 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        exclude: /\.module\.css$/,
+        include: path.resolve(__dirname, 'src/'),
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -56,6 +56,7 @@ const config = {
       {
         test: /\.(ts|tsx)$/,
         loader: 'ts-loader',
+        include: path.resolve(__dirname, 'src/'),
         exclude: /node_modules/,
       },
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },

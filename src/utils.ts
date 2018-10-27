@@ -1,10 +1,11 @@
 import { withInfo } from '@storybook/addon-info';
+
 const wInfoStyle = {
   header: {
     h1: {
-      marginRight: '20px',
-      fontSize: '25px',
       display: 'inline',
+      fontSize: '25px',
+      marginRight: '20px',
     },
     body: {
       paddingTop: 0,
@@ -22,4 +23,4 @@ const wInfoStyle = {
   },
 };
 export const wInfo = (text) =>
-  withInfo({ inline: true, source: false, styles: wInfoStyle, text: text });
+  withInfo({ inline: true, source: true, styles: wInfoStyle, text });

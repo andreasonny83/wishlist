@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ThemeProvider } from './theme';
 import { log, LogLevelDesc } from './log';
-import { Button } from './components/Button';
+import { Button } from './components/button';
 import { WishlistProvider } from './wishlist.provider';
 
 import './styles/index.css';
@@ -29,6 +29,10 @@ interface IAppProps {
 }
 
 class App extends React.PureComponent<IAppProps> {
+  public onClick() {
+    alert('click');
+  }
+
   public render() {
     return (
       <WishlistProvider value={this.props.config}>
@@ -39,7 +43,9 @@ class App extends React.PureComponent<IAppProps> {
               <br />
               <span>Welcome to WishList</span>
             </h1>
-            <Button className="start-button">Start</Button>
+            <Button onClick={this.onClick} className="start-button">
+              Start
+            </Button>
             <Button disabled={true} className="start-button">
               Disabled
             </Button>
