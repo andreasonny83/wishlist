@@ -7,6 +7,11 @@
 
 [![netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com)
 
+## Info
+
+- Project running live at: https://wishlist-app.netlify.com
+- Components showcase live at: https://wishlist-app-storybook.netlify.com
+
 ## Prerequisites
 
 This project requires NodeJS (at least version 6) and NPM.
@@ -29,6 +34,7 @@ $ yarn --version
 ## Table of contents
 
 - [Wishlist](#wishlist)
+  - [Info](#info)
   - [Prerequisites](#prerequisites)
   - [Table of contents](#table-of-contents)
   - [Getting Started](#getting-started)
