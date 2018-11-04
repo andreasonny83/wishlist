@@ -14,9 +14,9 @@ const themeOptions = { Teal: 'teal', Red: 'red' };
 stories.add(
   'Button',
   wInfo(`
-    ### Notes
+    ### Wishlist Button
 
-    Hello world!
+    Default wishlist button
     `)(() => (
     <Button
       theme={getTheme(select('theme', themeOptions, 'teal'))}
